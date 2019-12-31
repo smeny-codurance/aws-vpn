@@ -9,14 +9,14 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/empathybroker/aws-vpn/pkg/pki"
 	log "github.com/sirupsen/logrus"
+	"github.com/smeny-codurance/aws-vpn/pkg/pki"
 	jose "gopkg.in/square/go-jose.v2"
 )
 
 const (
-	kConfigLocationEnv = "OPENVPN_CONFIG_FILE"
-	kServiceUnitEnv    = "OPENVPN_SERVICE_UNIT"
+	configLocationEnv = "OPENVPN_CONFIG_FILE"
+	serviceUnitEnv    = "OPENVPN_SERVICE_UNIT"
 )
 
 func init() {
@@ -35,9 +35,9 @@ func init() {
 func getServerConfig(ctx context.Context) {
 	log.Debugf("Fetching server certificate")
 
-	configFileName, ok := os.LookupEnv(kConfigLocationEnv)
+	configFileName, ok := os.LookupEnv(configLocationEnv)
 	if !ok {
-		log.Fatalf("Missing %s environment variable", kConfigLocationEnv)
+		log.Fatalf("Missing %s environment variable", configLocationEnv)
 	}
 
 	privKey, err := pki.NewPrivateKey()
@@ -73,7 +73,7 @@ func getServerConfig(ctx context.Context) {
 		log.WithError(err).Fatal("Could not save new configuration file")
 	}
 
-	if serviceUnit, ok := os.LookupEnv(kServiceUnitEnv); ok {
+	if serviceUnit, ok := os.LookupEnv(serviceUnitEnv); ok {
 		if err := restartService(ctx, serviceUnit); err != nil {
 			log.WithError(err).Fatal("Error restarting OpenVPN service")
 		}

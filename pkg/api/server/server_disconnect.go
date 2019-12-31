@@ -5,8 +5,8 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/empathybroker/aws-vpn/pkg/api"
-	awsservices "github.com/empathybroker/aws-vpn/pkg/aws"
+	"github.com/smeny-codurance/aws-vpn/pkg/api"
+	awsservices "github.com/smeny-codurance/aws-vpn/pkg/aws"
 	log "github.com/sirupsen/logrus"
 )
 

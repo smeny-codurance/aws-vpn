@@ -11,9 +11,9 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/ses"
-	awsservices "github.com/empathybroker/aws-vpn/pkg/aws"
-	"github.com/empathybroker/aws-vpn/pkg/pki"
-	awspki "github.com/empathybroker/aws-vpn/pkg/pki/aws"
+	awsservices "github.com/smeny-codurance/aws-vpn/pkg/aws"
+	"github.com/smeny-codurance/aws-vpn/pkg/pki"
+	awspki "github.com/smeny-codurance/aws-vpn/pkg/pki/aws"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 )

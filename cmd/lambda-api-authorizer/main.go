@@ -10,8 +10,8 @@ import (
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-sdk-go/aws/arn"
-	awsservices "github.com/empathybroker/aws-vpn/pkg/aws"
-	"github.com/empathybroker/aws-vpn/pkg/gsuite"
+	awsservices "github.com/smeny-codurance/aws-vpn/pkg/aws"
+	"github.com/smeny-codurance/aws-vpn/pkg/gsuite"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 )

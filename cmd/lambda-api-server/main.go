@@ -7,7 +7,7 @@ import (
 
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/awslabs/aws-lambda-go-api-proxy/gorillamux"
-	serverapi "github.com/empathybroker/aws-vpn/pkg/api/server"
+	serverapi "github.com/smeny-codurance/aws-vpn/pkg/api/server"
 	log "github.com/sirupsen/logrus"
 )
 

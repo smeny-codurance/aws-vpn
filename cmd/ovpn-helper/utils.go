@@ -12,15 +12,15 @@ import (
 	"time"
 
 	"github.com/aws/aws-sdk-go/aws/session"
-	"github.com/coreos/go-systemd/dbus"
-	awsservices "github.com/empathybroker/aws-vpn/pkg/aws"
+	"github.com/coreos/go-systemd/v22/dbus"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
+	awsservices "github.com/smeny-codurance/aws-vpn/pkg/aws"
 	"golang.org/x/net/context/ctxhttp"
 )
 
 const (
-	kJsonContentType = "application/json"
+	jSONContentType = "application/json"
 )
 
 var (
@@ -60,7 +60,7 @@ func apiRequest(ctx context.Context, method string, url string, params map[strin
 	}
 
 	req, err := http.NewRequest(method, apiBase+url, &body)
-	req.Header.Set("Content-Type", kJsonContentType)
+	req.Header.Set("Content-Type", jSONContentType)
 
 	res, err := ctxhttp.Do(ctx, client, req)
 	if err != nil {
@@ -104,5 +104,4 @@ func restartService(ctx context.Context, unit string) error {
 		return ctx.Err()
 	}
 
-	return nil
 }

@@ -1,13 +1,13 @@
 # aws-vpn
 A Serverless OpenVPN Certificate Authority running on AWS
 
-Documentation is coming soon. A detailed introduction is available on the following [article](https://medium.com/empathybroker/build-a-cheaper-more-flexible-vpn-solution-on-aws-with-our-open-source-openvpn-certificate-1a94661ac0af)
-
+Originially based on the following [article](https://medium.com/empathybroker/build-a-cheaper-more-flexible-vpn-solution-on-aws-with-our-open-source-openvpn-certificate-1a94661ac0af)
 
 License
 ----
 
 Copyright 2019 EmpathyBroker
+Copyright 2019 Stéphane Meny (for Codurance)
 
  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
    

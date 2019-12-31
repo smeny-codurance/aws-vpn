@@ -3,9 +3,9 @@ package clientapi
 import (
 	"net/http"
 
-	"github.com/empathybroker/aws-vpn/pkg/api"
+	"github.com/smeny-codurance/aws-vpn/pkg/api"
 
-	"github.com/empathybroker/aws-vpn/pkg/pki"
+	"github.com/smeny-codurance/aws-vpn/pkg/pki"
 	"github.com/gorilla/mux"
 )
 

@@ -4,10 +4,10 @@ import (
 	"net/http"
 
 	"github.com/aws/aws-xray-sdk-go/xray"
-	awsservices "github.com/empathybroker/aws-vpn/pkg/aws"
-	"github.com/empathybroker/aws-vpn/pkg/gsuite"
-	"github.com/empathybroker/aws-vpn/pkg/pki"
-	awspki "github.com/empathybroker/aws-vpn/pkg/pki/aws"
+	awsservices "github.com/smeny-codurance/aws-vpn/pkg/aws"
+	"github.com/smeny-codurance/aws-vpn/pkg/gsuite"
+	"github.com/smeny-codurance/aws-vpn/pkg/pki"
+	awspki "github.com/smeny-codurance/aws-vpn/pkg/pki/aws"
 	"github.com/gorilla/mux"
 )
 

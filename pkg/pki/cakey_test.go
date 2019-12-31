@@ -19,8 +19,8 @@ func init() {
 }
 
 const (
-	kCAName   = "EmpathyBroker VPN"
-	kDuration = 90 * 24 * time.Hour
+	CAName   = "Custom VPN"
+	duration = 90 * 24 * time.Hour
 )
 
 func TestNewCAKey(t *testing.T) {
@@ -28,12 +28,12 @@ func TestNewCAKey(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	caKey, err := NewCAKey(kCAName, uuid.New().String(), kDuration)
+	caKey, err := NewCAKey(CAName, uuid.New().String(), duration)
 	if err != nil {
 		t.Fatalf("%+v", err)
 	}
 
-	rCaKey, err := caKey.Renew(kCAName, uuid.New().String(), kDuration)
+	rCaKey, err := caKey.Renew(CAName, uuid.New().String(), duration)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -59,7 +59,7 @@ func TestRenewSize(t *testing.T) {
 	max := []int{0, 0, 0}
 
 	for i := 0; i < 10; i++ {
-		caKey, err := NewCAKey(kCAName, uuid.New().String(), kDuration)
+		caKey, err := NewCAKey(CAName, uuid.New().String(), duration)
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -74,7 +74,7 @@ func TestRenewSize(t *testing.T) {
 		}
 		// t.Log(0, len(caData))
 
-		caKey, err = caKey.Renew(kCAName, uuid.New().String(), kDuration)
+		caKey, err = caKey.Renew(CAName, uuid.New().String(), duration)
 		if err != nil {
 			t.Fatal(err)
 		}
